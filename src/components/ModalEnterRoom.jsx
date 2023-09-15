@@ -23,7 +23,10 @@ export const ModalEnterRoom = (callback) => {
     const roomCode = data.get("code");
     const expiredRom = await APICheckRoomStatus(roomCode);
     console.log('expiracion total: ' + expiredRom);
-    if (!expiredRom.expired) {
+    if(!roomCode) {
+      setLoaderActive(false);
+      setError(true);
+    }else if (!expiredRom.expired) {
       setLoaderActive(false);
       callback.callback(roomCode);
     } else {

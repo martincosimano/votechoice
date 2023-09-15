@@ -90,10 +90,8 @@ const ModalCreate = (callback) => {
             setAlert(false);
             setLoaderActive(true);
 
-            setTimeout(() => {
-                setCreadoExitoso(!creadoExitoso);
-                handleCreateRoom(formData);
-            }, 2000);
+            setCreadoExitoso(!creadoExitoso);
+            handleCreateRoom(formData);
         }
     };
 
@@ -155,7 +153,7 @@ const ModalCreate = (callback) => {
     };
 
     return (
-        <div className="createRoom px-4 w-full overflow-y-auto">
+        <div className="createRoom px-4 w-full overflow-y-auto font-dmsans">
             <Loader active={loaderActive}></Loader>
             <h2 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
                 Crear una sala

@@ -4,20 +4,12 @@
 "use client"
 import React from 'react'
 import ProfileInfo from '@/components/ProfileInfo'
-import ProfileConfig from '@/components/ProfileConfig'
-import Loader from '@/components/Loader'
 
 const Perfil = () => {
 
-    const [loaderActive, setLoaderActive] = React.useState(true)
-
-    setTimeout(() => {
-        setLoaderActive(false)
-    }, 2000);
 
     return (
     <>
-        <Loader active={loaderActive} />
         <div className="h-auto w-full items-center flex flex-col md:flex-row md:justify-center mt-20 xl:mt-10">
             <ProfileInfo />
         </div>

@@ -26,7 +26,7 @@ export default function Panel() {
                     setRender(true);
                     setTimeout(() => {
                         setLoaderActive(false);
-                    }, 3000);
+                    }, 1000);
                 } else {
                     setLoaderActive(false);
                 }
