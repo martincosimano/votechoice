@@ -22,7 +22,7 @@ const Options = ({ opcion, percentage, timesVoted, participants }) => {
                 ></div>
             </div>
             <p className="text-sm">
-                {timesVoted} de {participants} votaron esta opción{" "}
+                {timesVoted} out of {participants} voted for this option{" "}
             </p>
         </div>
     );

@@ -18,10 +18,10 @@ const ModalSuccessChanges = () => {
         </div>
         <h1 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
         {" "}
-        ¡Cambios guardados!{" "}
+        Changes saved!{" "}
         </h1>
         <span className="flex justify-center">
-            Cambios guardados con éxito.
+        Changes saved successfully.
         </span>
     </main>
   )

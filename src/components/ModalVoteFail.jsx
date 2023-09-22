@@ -13,7 +13,7 @@ import React from "react";
 
 export const ModalVoteFail = () => {
     return (
-        <main className="p-6">
+        <main>
             <div className="flex items-center justify-center">
                 <Image
                     src="/Images/exclamation.svg"
@@ -23,9 +23,9 @@ export const ModalVoteFail = () => {
                     className="mb-6"
                 />
             </div>
-            <h1 className="text-red-600 font-dmsans font-bold text-3xl mb-4 text-center">
+            <h1 className="text-red-600 font-dmsans font-bold text-xl mb-4 mx-auto text-center md:w-8/12">
                 {" "}
-                Ya has votado en esta sala o eres el administrador {" "}
+                You have already voted in this room or you are the administrator{" "}
             </h1>
         </main>
     );

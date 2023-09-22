@@ -83,14 +83,14 @@ const ProfileInfo = () => {
         <div className='flex justify-center w-full p-0 test:w-1/2 md:px-4 font-dmsans'>
             <div className="flex w-full justify-between mx-8">
                 <form onSubmit={handleSubmit} className="flex flex-col w-full">
-                    <h1 className="font-bold text-3xl my-3"> Perfil </h1>
+                    <h1 className="font-bold text-3xl my-3">Profile</h1>
                     <div className='flex justify-between items-center'>
-                        <h2 className="font-bold text-xl my-2"> Editar perfil </h2>
+                        <h2 className="font-bold text-xl my-2">Edit Profile</h2>
                           <div className="right-24 top-24 xl:right-36 cursor-pointer">
                               <Handler state={edit} setState={setEdit} />
                           </div>
                     </div>
-                      <label htmlFor="name" className="font-semibold text-sm"> NOMBRE Y APELLIDO </label>
+                      <label htmlFor="name" className="font-semibold text-sm">FULL NAME</label>
                       <input 
                         type="text" 
                         className={availableEdit[`${edit}`]} 
@@ -100,7 +100,7 @@ const ProfileInfo = () => {
                         onChange={handleChange} 
                     />
                     <hr className="flex-grow border-secondaryBlack mb-2" />
-                    <label htmlFor="email" className="font-semibold text-sm"> EMAIL </label>
+                    <label htmlFor="email" className="font-semibold text-sm">EMAIL</label>
                     <input 
                         type="text" 
                         className={availableEdit['false']} 
@@ -110,7 +110,7 @@ const ProfileInfo = () => {
                         onChange={handleChange} 
                     />
                     <hr className="flex-grow border-secondaryBlack mb-2" />
-                    <label htmlFor="password" className="font-semibold text-sm"> CONTRASEÑA </label>
+                    <label htmlFor="password" className="font-semibold text-sm">PASSWORD</label>
                     <input 
                         type="password" 
                         className={availableEdit[`${edit}`]}
@@ -125,14 +125,14 @@ const ProfileInfo = () => {
                         className="text-red-500 text-center md:text-left text-sm font-semibold mt-3"
                         onClick = {() => setEliminarCuenta(!eliminarCuenta)}
                     > 
-                        ELIMINAR CUENTA 
+                        DELETE ACCOUNT 
                     </button>
                     <div className='flex justify-center mt-6'>
                         <button
                             type="submit"
                             className="text-secondaryWhite rounded-4xl bg-green-500 py-3 px-10"
                         >
-                            GUARDAR CAMBIOS
+                            SAVE CHANGES
                         </button>
                     </div>
                 </form>

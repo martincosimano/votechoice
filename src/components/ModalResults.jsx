@@ -40,10 +40,10 @@ const ModalResults = ({ roomId, problem, participants }) => {
                 <div className="flex flex-col items-center p-2">
                     <div className="items-center flex flex-col p-6 pb-0 pt-0">
                         <h2 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
-                            Resultados
+                            Results
                         </h2>
                         <p className="mb-4">
-                            Acá los resultados de tu votación más reciente:{" "}
+                        Here are the results of your most recent room:{" "}
                             <br />{" "}
                             <span className="font-semibold">{problem}</span>
                         </p>

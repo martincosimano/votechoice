@@ -41,7 +41,7 @@ export const ModalEnterRoom = (callback) => {
       <div className="px-4">
         <h1 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
           {" "}
-          Entrar a la sala{" "}
+          Join room{" "}
         </h1>
         <form onSubmit={handelSubmit}>
           <div className="mt-10">
@@ -50,7 +50,7 @@ export const ModalEnterRoom = (callback) => {
               htmlFor="code"
             >
               {" "}
-              NOMBRE DE LA SALA O CÓDIGO{" "}
+              ROOM NAME OR CODE{" "}
             </label>
             <input
               className="w-full border-b border-secondaryBlack bg-slate-50 px-2 h-8"
@@ -60,11 +60,11 @@ export const ModalEnterRoom = (callback) => {
             />
           </div>
           {error && (
-            <p className="font-medium font-dmsans text-center text-red-600 my-6"> Sala vencida o no existe </p>
+            <p className="font-medium font-dmsans text-center text-red-600 my-6"> Room expired or does not exist </p>
           )}
           <div className="flex justify-center items-center mt-6">
             <button className="bg-primaryPurple text-white font-semibold rounded-3xl px-4 py-2">
-              Entrar →
+              Join →
             </button>
           </div>
         </form>

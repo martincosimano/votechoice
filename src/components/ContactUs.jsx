@@ -64,7 +64,7 @@ const ContactUs = () => {
                             <input
                                 className="py-2 px-4 rounded-3xl text-tertiaryGray placeholder-tertiaryGray"
                                 type="text"
-                                placeholder="First and Last Name"
+                                placeholder="Full name"
                                 value={formData.contactName}
                                 onChange={(e) =>
                                     setFormData({
@@ -131,9 +131,9 @@ const ContactUs = () => {
                     </div>
                     <div className="flex flex-col items-center mb-8 md:items-start md:w-1/2 gap-3">
                         <h2 className="font-bold text-secondaryBlack">CONTACT</h2>
-                        <h1 className="font-bold text-primaryOrange text-4xl">Let's talk today</h1>
+                        <h1 className="font-bold text-primaryOrange text-4xl">{"Let's talk today"}</h1>
                         <div className="flex flex-col items-center md:items-start gap-5">
-                            <p className="text-center md:text-start text-lg sm:w-11/12">If you have any questions, ideas, or simply wish to get in touch with us to explore collaboration opportunities, please don't hesitate to do so.</p>
+                            <p className="text-center md:text-start text-lg sm:w-11/12">{"If you have any questions, ideas, or simply wish to get in touch with us to explore collaboration opportunities, please don't hesitate to do so."}</p>
                             <div className="flex flex-col gap-5">
                                 <div className="flex gap-2 items-center">
                                     <Image

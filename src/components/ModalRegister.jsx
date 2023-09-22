@@ -60,7 +60,7 @@ const ModalRegister = (callback) => {
     return (
         <>
             <Loader active={loaderActive}></Loader>
-            <main className="px-4 md:px-8 py-2">
+            <main>
                 <h1 className="text-secondaryBlack  text-5xl font-bold font-dmsans flex justify-center">
                     {" "}
                     Register{" "}

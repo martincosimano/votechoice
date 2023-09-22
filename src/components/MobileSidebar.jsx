@@ -29,21 +29,21 @@ const MobileSidebar = ({setIsMobileMenuOpen}) => {
                 <li className="w-full text-white font-semibold font-texts md:block cursor-pointer hover:bg-white hover:text-primaryPurple py-2">
                     <Link href={`/login/${ userData }`}>
                         <div className="flex justify-center items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                            <span className="text-lg font-normal">Panel</span>
+                            <span className="text-lg font-normal">Home</span>
                         </div>
                     </Link>
                 </li>
                 <li className="w-full text-white font-semibold font-texts md:block cursor-pointer hover:bg-white hover:text-primaryPurple py-2">
                     <Link href={`/login/${ userData }/votaciones`}>
                         <div className="flex justify-center items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                            <span className="text-lg font-normal">Votaciones</span>
+                            <span className="text-lg font-normal">Voting</span>
                         </div>
                     </Link>
                 </li>
                 <li className="w-full text-white font-semibold font-texts md:block cursor-pointer hover:bg-white hover:text-primaryPurple py-2">
                     <Link href={`/login/${ userData }/perfil`}>
                         <div className="flex justify-center items-center" onClick={() => setIsMobileMenuOpen(false)}>
-                            <span className="text-lg font-normal">Perfil</span>
+                            <span className="text-lg font-normal">Profile</span>
                         </div>
                     </Link>
                 </li>
@@ -52,7 +52,7 @@ const MobileSidebar = ({setIsMobileMenuOpen}) => {
                         setConfirmLogout(true);
                     }}>
                         <div className="flex justify-center items-center" onClick={() => {handleClickSignOut}}>
-                            <span className="text-lg font-normal">Salir</span>
+                            <span className="text-lg font-normal">Log out</span>
                         </div>
                     </Link>
                 </li>

@@ -14,12 +14,12 @@ const ModalCopiar = ({ image, title, content, code }) => {
   const handleCopyClick = async () => {
     try {
       await navigator.clipboard.writeText(code);
-      setAlert("Copiado con éxito!");
+      setAlert("Copied successfully");
       setTimeout(() => {
         setAlert("");
       }, 1000);
     } catch (err) {
-      setAlert("No se pudo copiar el texto");
+      setAlert("Unable to copy text.");
     }
   };
 
@@ -43,7 +43,7 @@ const ModalCopiar = ({ image, title, content, code }) => {
                     </svg>
                 </button>
             </div>
-            <p className="text-gray-300 text-center mt-2 text-xs">{alert}</p>
+            <p className="text-gray-600 text-center mt-2 text-xs">{alert}</p>
         </div>
     )
 }

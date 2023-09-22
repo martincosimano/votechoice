@@ -14,7 +14,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className="font-dmsans">
         <AuthProvider session={session}>
           <Navbar />
           { children }

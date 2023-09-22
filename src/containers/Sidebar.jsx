@@ -60,7 +60,7 @@ const Sidebar = () => {
 
                 <ChangeLi
                     img = { activeIndex === 0  ? imgsM.panel : imgsN.panel }
-                    nombre={ 'Panel' }
+                    nombre={ 'Home' }
                     isActive={ activeIndex === 0 }
                     href={ `/login/${ userData }` }
                     onClick={() => handleItemClick(0)}
@@ -68,7 +68,7 @@ const Sidebar = () => {
 
                 <ChangeLi
                     img = { activeIndex === 1 ? imgsM.votacion : imgsN.votacion }
-                    nombre={ 'Votaciones' }
+                    nombre={ 'Voting' }
                     isActive={ activeIndex === 1 }
                     href = { `/login/${ userData }/votaciones` }
                     onClick={() => handleItemClick(1)}
@@ -76,7 +76,7 @@ const Sidebar = () => {
                 
                 <ChangeLi
                     img = { activeIndex === 2 ? imgsM.perfil : imgsN.perfil }
-                    nombre={ 'Perfil' }
+                    nombre={ 'Profile' }
                     isActive={ activeIndex === 2 }
                     href= { `/login/${ userData }/perfil` }
                     onClick={() => handleItemClick(2)}
@@ -84,7 +84,7 @@ const Sidebar = () => {
 
                 <ChangeLi
                     img = { activeIndex === 3 ? imgsM.logout : imgsN.logout }
-                    nombre={ 'Salir' }
+                    nombre={ 'Log out' }
                     isActive={ activeIndex === 3 }
                     onClick={() => {
                         handleItemClick(3)

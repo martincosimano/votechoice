@@ -58,16 +58,16 @@ const Login = () => {
     return (
         <>
             <Loader active={loaderActive}></Loader>
-            <main className="flex justify-between items-center mx-2 md:mx-0 font-dmsans flex-col md:flex-row md:py-8 mb-4 sm:mb-0 md:h-100">
+            <main className="flex justify-between items-center mx-2 md:mx-0 flex-col md:flex-row md:py-8 mb-4 sm:mb-0 md:h-100">
                 <section className="my-10 w-full text-center md:w-2/5 md:text-left mx-auto">
-                    <h1 className=" text-5xl font-bold font-dmsans flex justify-center">
+                    <h1 className=" text-5xl font-bold flex justify-center">
                         Log in
                     </h1>
                     <div className="relative mx-8">
                         <form onSubmit={handleSubmit}>
                             <div className="my-4 pt-4">
                                 <label
-                                    className=" font-dmsans font-medium"
+                                    className="font-medium"
                                     htmlFor="email"
                                 >
                                     {" "}
@@ -81,16 +81,16 @@ const Login = () => {
                                     required="required"
                                 />
                             </div>
-                            <Password nameLabel="CONTRASEÑA" name="password" />
+                            <Password nameLabel="PASSWORD" name="password" />
                             <div className="mt-2">
                                 {error && (
-                                    <p className="font-medium font-dmsans text-red-600">
+                                    <p className="font-medium text-red-600">
                                         {error}
                                     </p>
                                 )}
                             </div>
                             <div className="flex flex-col lg:flex-row justify-start items-center mt-10">
-                                <button className="bg-primaryPurple text-secondaryWhite w-full lg:w-49 font-dmsans font-medium py-2 rounded-full">
+                                <button className="bg-primaryPurple text-secondaryWhite w-full lg:w-49  font-medium py-2 rounded-full">
                                     {" "}
                                     Log in{" "}
                                 </button>
@@ -101,13 +101,13 @@ const Login = () => {
                         </div>
                         <div className="flex gap-4 my-7">
                             <hr className="flex-grow border-secondaryBlack mt-3" />
-                            <span className=" font-dmsans font-medium">
+                            <span className="font-medium">
                                 OR
                             </span>
                             <hr className="flex-grow border-secondaryBlack mt-3" />
                         </div>
                         <button
-                            className="text-primaryPurple font-dmsans font-medium border-primaryPurple border rounded-full w-full py-2"
+                            className="text-primaryPurple font-medium border-primaryPurple border rounded-full w-full py-2"
                             onClick={() => setStateModal(!stateModal)}
                         >
                             {" "}

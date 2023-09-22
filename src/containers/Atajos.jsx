@@ -55,16 +55,16 @@ const Atajos = () => {
     return (
         <div className="w-fit box-border p-4 flex-col  rounded-3x1">
             <h2 className="font-dmsans text-3xl mt-1.5 mb-4 font-semibold">
-                Atajos
+                Shortcuts
             </h2>
             <div className="flex-col items-center justify-center">
                 <OptionCard
                     action={() => setEnterRoom(!enterRoom)}
-                    text={"Entrar a sala"}
+                    text={"Join room"}
                     image={"/Images/atajos/atajo-1.png"}
                 />
                 <OptionCard
-                    text={"Crear sala"}
+                    text={"Create room"}
                     image={"/Images/atajos/atajo-2.png"}
                     action={() => setStateModalCreate(!stateModalCreate)}
                 />
@@ -80,8 +80,8 @@ const Atajos = () => {
             <ModalGeneral state={creadoExitoso} changeState={setCreadoExitoso}>
                 <ModalCopiar
                     image={"/Images/CheckIcon.png"}
-                    title={"Sala creada con éxito!"}
-                    content={"Tu código de sala es:"}
+                    title={"Room created successfully!"}
+                    content={"Your room code is:"}
                     code={shareCode}
                 />
             </ModalGeneral>

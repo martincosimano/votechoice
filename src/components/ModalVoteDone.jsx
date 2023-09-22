@@ -20,10 +20,10 @@ export const ModalVoteDone = ({ roomCode }) => {
       </div>
       <h1 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
         {" "}
-        Votación realizada con éxito{" "}
+        Vote successfully completed!{" "}
       </h1>
       <span className="flex justify-center">
-        Votaste en la sala:<b>&nbsp; {roomCode} </b>
+      You voted in the room:<span className="font-bold">&nbsp; {roomCode} </span>
       </span>
     </main>
   );

@@ -17,8 +17,8 @@ const SinVotaciones = () => {
                 <Image src="/Images/sinvotaciones/sinvotaciones-ImagePlaceholder.png" alt="noVotaciones" width={50} height={50} />
             </div>
             <div className="flex flex-col items-center mt-5 gap-5 text-center">
-                <h2 className="text-2xl font-bold">Sin votaciones</h2>
-                <p className="text-lg text-center max-w-md">Todavía no creaste ninguna votación o no tienes votaciones recientes</p>
+                <h2 className="text-2xl font-bold">No voting activity</h2>
+                <p className="text-lg text-center max-w-md">{"You haven't created any voting activities yet or you don't have any recent votes."}</p>
             </div>
         </div>
     )

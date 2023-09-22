@@ -156,11 +156,11 @@ const ModalCreate = (callback) => {
         <div className="createRoom px-4 w-full overflow-y-auto font-dmsans">
             <Loader active={loaderActive}></Loader>
             <h2 className="text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center">
-                Crear una sala
+                Create room
             </h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <label htmlFor="titulo" className="font-semibold">
-                    NOMBRE DE LA SALA
+                    ROOM NAME
                 </label>
                 <input
                     type="text"
@@ -169,12 +169,12 @@ const ModalCreate = (callback) => {
                     autoComplete="off"
                     value={formData.problem}
                     onChange={handleChange}
-                    placeholder="Escribe la decisión a tomar"
+                    placeholder="Write down the decision to make"
                     className="px-2 rounded-lg bg-none text-sm h-8"
                 />
                 <div className="border-b w-full mt-1 border-secondaryBlack"></div>
                 <label htmlFor="fecha" className="font-semibold">
-                    FECHA LIMITE
+                    TIME LIMIT
                 </label>
                 <input
                     type="datetime-local"
@@ -187,12 +187,12 @@ const ModalCreate = (callback) => {
                 />
                 <div className="border-b w-full mt-1 border-secondaryBlack"></div>
                 <label htmlFor="opciones" className="font-semibold">
-                    AGREGAR OPCIONES
+                    ADD OPTIONS
                 </label>
                 <div className="handler relative">
                     <input
                         type="text"
-                        placeholder="Escribe una opción"
+                        placeholder="Write an option"
                         className="w-full px-2 rounded-lg bg-none h-8 text-sm"
                         value={value}
                         onChange={(event) => setValue(event.target.value)}
@@ -208,7 +208,7 @@ const ModalCreate = (callback) => {
                     {advice && (
                         <p className="text-red-500 text-xs text-center">
                             {" "}
-                            La opción no puede estar vacía{" "}
+                            The option cannot be empty{" "}
                         </p>
                     )}
                 </div>
@@ -232,13 +232,13 @@ const ModalCreate = (callback) => {
 
                 {alert && (
                     <p className="text-red-500 text-xs text-center">
-                        Faltan opciones de respuesta o campos por completar
+                        Fields are missing
                     </p>
                 )}
 
                 {limitAlert && (
                     <p className="text-red-500 text-xs text-center">
-                        No puedes añadir más opciones
+                        {"You can't add more options"}
                     </p>
                 )}
 
@@ -248,7 +248,7 @@ const ModalCreate = (callback) => {
                         className="bg-primaryPurple text-secondaryWhite font-semibold rounded-3xl w-3/5 sm:w-2/5 px-4 py-2"
                     >
                         {" "}
-                        Crear Sala{" "}
+                        Create room{" "}
                     </button>
                 </div>
             </form>

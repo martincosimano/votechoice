@@ -28,22 +28,22 @@ const ModalConfirmLogout = ({state, changeState}) => {
         <Loader active={loaderActive} />
         <div className='flex justify-center'>
             <div className='flex flex-col  items-center p-6'>
-                <h1 className='text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center'>Cerrar sesión</h1>
+                <h1 className='text-primaryPurple font-dmsans font-bold text-3xl mb-4 text-center'>Log out</h1>
                 <div className='items-center flex flex-col p-6 pb-0 pt-0 text-center'>
-                    <p> Estás seguro que deseas cerrar sesión? </p>
+                    <p>Are you sure you want to log out?</p>
                 </div>
                 <div className="mt-8 flex justify-center gap-6">
                     <button 
                         className="font-semibold rounded-full w-50  bg-red-600 px-4 py-2 text-secondaryWhite" 
                         onClick = {() => changeState(!state)}
                     >
-                        CANCELAR
+                        CANCEL
                     </button>
                     <button 
                         className="font-semibold rounded-full w-50 first-letter: bg-slate-300 px-4 py-2 text-primaryPurple"
                         onClick={Logout}
                     >
-                        CONFIRMAR
+                        CONFIRM
                     </button>
                 </div>
             </div>

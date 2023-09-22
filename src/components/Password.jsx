@@ -28,7 +28,7 @@ const Password = ({ nameLabel, name }) => {
         {" "}
         {nameLabel}{" "}
       </label>
-      <div className="relative">
+      <div className="relative flex items-center">
         <input
           className="w-full border-b text-black border-secondaryBlack bg-slate-50 px-2 h-8"
           type={openEye ? "text" : "password"}
@@ -42,7 +42,7 @@ const Password = ({ nameLabel, name }) => {
           src={openEye ? ojo.open : ojo.close}
           alt="image"
           onClick={() => setOpenEye(!openEye)}
-          className="inline-block absolute right-0 bottom-2 cursor-pointer"
+          className="inline-block absolute right-1 cursor-pointer"
         />
       </div>
     </div>

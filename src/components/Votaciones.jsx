@@ -38,6 +38,8 @@ const Votaciones = () => {
     const [shareModal, setShareModal] = React.useState(false);
     const [loaderActive, setLoaderActive] = React.useState(false);
     const [search, setSearch] = React.useState("");
+    const [showActive, setShowActive] = React.useState(true);
+    const [showInactive, setShowInactive] = React.useState(true);
 
     React.useEffect(() => {
         const votants = async () => {
@@ -59,9 +61,27 @@ const Votaciones = () => {
         votants();
     }, [session?.user?.email]);
 
-    const filteredRooms = rooms.filter((room) =>
-        room?.problem.toLocaleLowerCase().includes(search.toLocaleLowerCase())
-    );
+    const toggleActive = () => {
+        setShowActive(!showActive);
+    };
+
+    const toggleInactive = () => {
+        setShowInactive(!showInactive);
+    };
+
+    const filteredRooms = rooms.filter((room) => {
+        const includesSearch = room.problem.toLocaleLowerCase().includes(search.toLocaleLowerCase());
+
+        if (!showActive && !showInactive) {
+            return true;
+        } else if (showActive && showInactive) {
+            return includesSearch;
+        } else if (showActive) {
+            return !room.expired && includesSearch;
+        } else {
+            return room.expired && includesSearch;
+        }
+    });
 
     const winnerPercent = (arr) => {
         const winnerTimes = Object.values(arr)
@@ -100,16 +120,16 @@ const Votaciones = () => {
         <>
             <Loader active={loaderActive} />
             <div className="w-full xl:w-3/5 mt-6 font-dmsans mx-4 xl:mx-0 sm:py-5 test:flex test:flex-col test:items-center test:w-2/3 xl:block xl:ml-40">
-                <h1 className="ml-6 mb-4 text-4xl font-bold text-center xl:text-start">Votaciones</h1>
+                <h1 className="ml-6 mb-4 text-4xl font-bold text-center xl:text-start">Voting</h1>
                 {!rooms.length ? <div className="flex flex-col items-center justify-center bg-secondaryGray pt-6 test:w-4/5 shadow rounded-4xl h-90 sm:h-85">
-                    <p>Aún no has participado en una votación.</p>
-                </div> : <div className="flex flex-col bg-secondaryGray pt-6 test:w-4/5 shadow rounded-4xl pb-20 sm:pb-0">
+                    <p>{"You haven't participated in a voting activity yet."}</p>
+                </div> : <div className="flex flex-col bg-secondaryGray pt-6 test:w-4/5 shadow rounded-4xl pb-20 sm:pb-8 px-2 sm:px-4">
                     <div className="pb-10 flex flex-col items-center">
                         <form className="bg-primaryOrange rounded-full flex items-center h-8 justify-around px-2 w-1/2 shadow">
                             <input
                                 type="text"
                                 name="busqueda"
-                                placeholder="Buscar sala"
+                                placeholder="Search for a room"
                                 className="busqueda bg-primaryOrange text-secondaryWhite mx-2 placeholder-white text-sm focus:outline-none w-full"
                                 value={search}
                                 onChange={(event) =>
@@ -126,13 +146,13 @@ const Votaciones = () => {
                         </form>
                     </div>
                     <div className="flex gap-4 pl-6 py-5">
-                        <div className="flex justify-center items-center rounded-full bg-slate-300  gap-2 w-24 h-6 cursor-pointer">
+                        <div onClick={toggleInactive} className="flex justify-center items-center rounded-full bg-slate-300  gap-2 w-24 h-6 cursor-pointer">
                             <div className="w-3 h-3 bg-green-500 rounded-full shadow"></div>
-                            <button className="text-xs text-semibold">Activas</button>
+                            <button className="text-xs text-semibold">Actives</button>
                         </div>
-                        <div className="flex justify-center items-center rounded-full bg-slate-300 gap-2 w-24 h-6 cursor-pointer">
+                        <div onClick={toggleActive} className="flex justify-center items-center rounded-full bg-slate-300 gap-2 w-24 h-6 cursor-pointer">
                             <div className="w-3 h-3 bg-red-500 rounded-full shadow"></div>
-                            <button className="text-xs text-semibold">Inactivas</button>
+                            <button className="text-xs text-semibold">Inactives</button>
                         </div>
                     </div>
                     <div className="flex flex-col gap-4 px-8 pb-10 h-44 py-2 overflow-y-auto mb-2">
@@ -194,6 +214,7 @@ const Votaciones = () => {
                                     >
                                         <Image
                                             src="/Images/info.svg"
+                                            alt="info"
                                             width={22}
                                             height={22}
                                             className="cursor-pointer max-w-none"
@@ -233,8 +254,9 @@ const Votaciones = () => {
                 <ModalGeneral state={shareModal} changeState={setShareModal}>
                     <ModalCopiar
                         image={"/Images/ShareIcon.png"}
-                        title="Comparte la sala con tus amigos"
-                        content="Código: "
+                        alt="share"
+                        title="Share the room with your friends"
+                        content="Code: "
                         code={code}
                     />
                 </ModalGeneral>

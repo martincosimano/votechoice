@@ -64,10 +64,10 @@ const Resultados = () => {
             <div className="flex flex-col p-4 font-dmsans sm:w-1/2 xl:w-45">
                 <div className="flex flex-col text-center sm:text-left pb-3 px-3">
                     <h2 className="text-4xl font-bold text-secondaryBlack pt-2">
-                        Resultados
+                        Results
                     </h2>
                     <p className="text-sm md:text-md py-3">
-                        Acá los resultados de tu votación más reciente:{" "}
+                        Most recent vote room:{" "}
                         <span className="font-bold">{result.problem}</span>
                     </p>
                 </div>
@@ -95,7 +95,7 @@ const Resultados = () => {
                                 {result.participants}
                             </span>
                             <span className="text-sm md:text-xl text-primaryPurple font-bold">
-                                Participantes
+                                Participants
                             </span>
                         </div>
                         <div className="flex flex-col shadow p-3 rounded-lg">
@@ -113,7 +113,7 @@ const Resultados = () => {
                         className="text-lg bg-primaryPurple text-white font-bold rounded-3xl px-4 py-2"
                         onClick={() => setModalResults(!modalResults)}
                     >
-                        Ver respuestas
+                        View responses
                     </button>
                 </div>
                 <ModalGeneral
