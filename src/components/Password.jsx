@@ -30,7 +30,7 @@ const Password = ({ nameLabel, name }) => {
       </label>
       <div className="relative">
         <input
-          className="w-full border-b text-black dark:text-darkBlack border-secondaryBlack bg-slate-50 px-2 h-8"
+          className="w-full border-b text-black border-secondaryBlack bg-slate-50 px-2 h-8"
           type={openEye ? "text" : "password"}
           name={name}
           id={name}

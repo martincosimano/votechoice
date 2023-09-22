@@ -23,12 +23,12 @@ const Login = () => {
     const [loaderActive, setLoaderActive] = useState(false);
 
 
-  useEffect(() => {
-    if (status === "authenticated") {
-      const userData = session?.user?.id;
-      router.push(`/login/${userData}`);
-    }
-  }, [status]);
+    useEffect(() => {
+        if (status === "authenticated") {
+            const userData = session?.user?.id;
+            router.push(`/login/${userData}`);
+        }
+    }, [status]);
 
     const cerrarModal = () => {
         setStateModal(!stateModal);
@@ -50,7 +50,7 @@ const Login = () => {
         } else {
             setLoaderActive(false);
             setError(
-                "Inicio de sesión fallido: verifica tu email y contraseña"
+                "Login failed: please check your email and password."
             );
         }
     };
@@ -61,7 +61,7 @@ const Login = () => {
             <main className="flex justify-between items-center mx-2 md:mx-0 font-dmsans flex-col md:flex-row md:py-8 mb-4 sm:mb-0 md:h-100">
                 <section className="my-10 w-full text-center md:w-2/5 md:text-left mx-auto">
                     <h1 className=" text-5xl font-bold font-dmsans flex justify-center">
-                        Iniciar sesión
+                        Log in
                     </h1>
                     <div className="relative mx-8">
                         <form onSubmit={handleSubmit}>
@@ -74,7 +74,7 @@ const Login = () => {
                                     EMAIL{" "}
                                 </label>
                                 <input
-                                    className="w-full border-b text-black dark:text-darkBlack border-secondaryBlack dark:border-secondaryWhite bg-slate-50 px-2 h-8"
+                                    className="w-full border-b text-black border-secondaryBlack bg-slate-50 px-2 h-8"
                                     type="email"
                                     name="email"
                                     id="email"
@@ -92,7 +92,7 @@ const Login = () => {
                             <div className="flex flex-col lg:flex-row justify-start items-center mt-10">
                                 <button className="bg-primaryPurple text-secondaryWhite w-full lg:w-49 font-dmsans font-medium py-2 rounded-full">
                                     {" "}
-                                    INGRESAR{" "}
+                                    Log in{" "}
                                 </button>
                             </div>
                         </form>
@@ -100,18 +100,18 @@ const Login = () => {
                             <GoogleButton />
                         </div>
                         <div className="flex gap-4 my-7">
-                            <hr className="flex-grow border-secondaryBlack dark:border-secondaryWhite mt-3" />
+                            <hr className="flex-grow border-secondaryBlack mt-3" />
                             <span className=" font-dmsans font-medium">
                                 OR
                             </span>
-                            <hr className="flex-grow border-secondaryBlack dark:border-secondaryWhite mt-3" />
+                            <hr className="flex-grow border-secondaryBlack mt-3" />
                         </div>
                         <button
                             className="text-primaryPurple font-dmsans font-medium border-primaryPurple border rounded-full w-full py-2"
                             onClick={() => setStateModal(!stateModal)}
                         >
                             {" "}
-                            REGISTRATE{" "}
+                            Register{" "}
                         </button>
                     </div>
                 </section>

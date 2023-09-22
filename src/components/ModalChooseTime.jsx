@@ -91,7 +91,7 @@ export const ModalChooseTime = ({ code, callback }) => {
             </p>
             <div className="flex gap-2">
                 <div className="flex justify-center items-center rounded-full bg-slate-300 w-20 gap-2 h-6 cursor-pointer">
-                    <div className="w-4 h-4 bg-green-500 dark:bg-darkBlack rounded-full"></div>
+                    <div className="w-4 h-4 bg-green-500 rounded-full"></div>
                     <button className="text-xs">Activa</button>
                 </div>
             </div>

@@ -34,7 +34,7 @@ const About = () => {
     },
     {
       nombre: "Martín Cosimano",
-      rol: "Fullstack",
+      rol: "Frontend",
       linkedin: "https://www.linkedin.com/in/martin-cosimano/",
       headshot: "/Images/about/Martin.png"
     },
@@ -56,11 +56,9 @@ const About = () => {
     <ContainerGlobal>
       <main className="font-dmsans">
         <div className="flex flex-col items-center">
-          <h1 className="text-primaryPurple font-bold text-4xl text-center items-center justify-center pb-4">
-            Conoce a Nuestro Team
-          </h1>
-          <p className="text-lg text-center w-full md:w-7/12">Descubre quiénes somos, lo que hacemos y por qué somos apasionados por lo que hacemos. ¡Estamos ansiosos por conocerte!</p>
-          <div className="flex flex-col sm:grid sm:grid-cols-8 sm:grid-rows-2 sm:gap-20 md:gap-24 gap-y-10 mt-14">
+          <h1 className="text-primaryPurple font-bold text-4xl text-center items-center justify-center pb-4">Meet Our Team</h1>
+          <p className="text-lg text-center w-full md:w-6/12">Discover who we are, what we do, and why we're passionate about our work. We're excited to get to know you!</p>
+          <div className="flex flex-col-reverse sm:grid sm:grid-cols-8 sm:grid-rows-2 sm:gap-20 md:gap-24 gap-y-10 mt-14">
             {participantes.map((participante, index) => (
               <Participants
                 key={index}

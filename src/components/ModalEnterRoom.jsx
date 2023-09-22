@@ -53,7 +53,7 @@ export const ModalEnterRoom = (callback) => {
               NOMBRE DE LA SALA O CÓDIGO{" "}
             </label>
             <input
-              className="w-full border-b border-secondaryBlack bg-slate-50 dark:bg-darkNav px-2 h-8"
+              className="w-full border-b border-secondaryBlack bg-slate-50 px-2 h-8"
               type="text"
               name="code"
               id="code"

@@ -60,10 +60,10 @@ const ModalRegister = (callback) => {
     return (
         <>
             <Loader active={loaderActive}></Loader>
-            <main>
+            <main className="px-4 md:px-8 py-2">
                 <h1 className="text-secondaryBlack  text-5xl font-bold font-dmsans flex justify-center">
                     {" "}
-                    Registrate{" "}
+                    Register{" "}
                 </h1>
                 <form onSubmit={handleSubmit}>
                     <div className="my-6">
@@ -72,7 +72,7 @@ const ModalRegister = (callback) => {
                             htmlFor="nombre"
                         >
                             {" "}
-                            NOMBRE Y APELLIDO{" "}
+                            FULL NAME{" "}
                         </label>
                         <input
                             className="w-full border-b border-secondaryBlack bg-slate-50 px-2 h-8"
@@ -99,13 +99,13 @@ const ModalRegister = (callback) => {
                     </div>
 
                     <Password
-                        nameLabel="CONTRASEÑA"
+                        nameLabel="PASSWORD"
                         name="passwordModal"
                         id="passwordModal"
                     />
 
                     <Password
-                        nameLabel="REPETIR CONTRASEÑA"
+                        nameLabel="CONFIRM PASSWORD"
                         name="passwordModal2"
                     />
                     <div className="my-2">
@@ -118,7 +118,7 @@ const ModalRegister = (callback) => {
 
                     <button className="bg-primaryPurple text-secondaryWhite font-dmsans font-medium w-full py-2 rounded-full">
                         {" "}
-                        REGISTRAR{" "}
+                        REGISTER{" "}
                     </button>
 
                     {/* <button className='text-primaryPurple font-dmsans font-medium border-primaryPurple border rounded-full w-full py-2'> INICIAR SESIÓN </button> */}

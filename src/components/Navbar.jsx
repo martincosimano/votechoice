@@ -52,7 +52,7 @@ const Navbar = () => {
   if (path === "/" || path === "/about" || path === "/contact") {
     return (
       <header>
-        <nav className="flex justify-between items-center px-6 sm:px-12 bg-white dark:bg-darkNav shadow-md h-20">
+        <nav className="flex justify-between items-center px-6 sm:px-8 bg-white shadow-md h-20">
           <ul className="flex w-3/4">
             <li>
               <Image
@@ -64,19 +64,19 @@ const Navbar = () => {
               />
             </li>
           </ul>
-          <ul className="flex justify-end gap-12 w-3/4 items-center">
+          <ul className="flex justify-end gap-12 w-full items-center">
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/"}>Inicio</Link>
+              <Link href={"/"}>Home</Link>
             </li>
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/about"}>Nosotros </Link>
+              <Link href={"/about"}>About</Link>
             </li>
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/contact"}>Contacto</Link>
+              <Link href={"/contact"}>Contact</Link>
             </li>
             <li className="hidden md:block">
               <Link href={'/login'}>
-                <button className="bg-primaryPurple text-white font-semibold rounded-3xl px-5 py-2">Empezar</button>
+                <button className="bg-primaryPurple text-white font-semibold rounded-3xl px-5 py-2">Join us</button>
               </Link> 
             </li>
             <li className="absolute top-7 right-12 block md:hidden cursor-pointer" onClick={toggleMobileMenu}>
@@ -93,7 +93,7 @@ const Navbar = () => {
   } else if (path === "/login") {
     return (
       <header>
-        <nav className="flex justify-between px-6 sm:px-12 items-center bg-white dark:bg-darkNav  shadow-md h-20">
+        <nav className="flex justify-between px-6 sm:px-12 items-center bg-white shadow-md h-20">
           <ul className="flex w-3/4">
             <li>
               <Image
@@ -106,13 +106,13 @@ const Navbar = () => {
           </ul>
           <ul className="flex justify-end gap-12 w-3/4 items-center">
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/"}>Inicio</Link>
+              <Link href={"/"}>Home</Link>
             </li>
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/about"}>Nosotros</Link>
+              <Link href={"/about"}>About</Link>
             </li>
             <li className=" font-semibold hidden md:block cursor-pointer">
-              <Link href={"/contact"}>Contacto</Link>
+              <Link href={"/contact"}>Contact</Link>
             </li>
             <li className="absolute top-7 right-12 block md:hidden cursor-pointer" onClick={toggleMobileMenu}>
               <Image src="/menuIcon.svg" alt="MenuIcon" width={30} height={30} />
@@ -127,7 +127,7 @@ const Navbar = () => {
   } else if (isLargeScreen) {
     return (
       <header>
-        <nav className="flex justify-end h-20 w-screen dark:bg-darkNav ">
+        <nav className="flex justify-end h-20 w-screen">
           <ul className="flex justify-end px-24 items-center relative">
             <li className="right-20 cursor-pointer w-12 h-12 rounded-full border flex justify-center items-center shadow-md">
               <p className="text-primaryPurple font-semibold font-dmsans">{session.user.name.substring(0,2).toUpperCase()}</p>

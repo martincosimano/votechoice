@@ -58,13 +58,13 @@ const ContactUs = () => {
         <ContainerGlobal>
             <Loader active={loaderActive} />
             <main className="flex justify-center items-center font-dmsans">
-                <div className="flex flex-col-reverse md:flex-row gap-20 mx-4 sm:mx-0 w-full">
+                <div className="flex flex-col-reverse md:flex-row gap-10 xl:gap-16 mx-4 sm:mx-0 w-full">
                     <div className="flex justify-center md:w-1/2">
                         <form className=" bg-secondaryGray flex flex-col gap-4 w-full sm:w-3/4 md:w-5/6 p-8 rounded-2xl shadow-xl">
                             <input
                                 className="py-2 px-4 rounded-3xl text-tertiaryGray placeholder-tertiaryGray"
                                 type="text"
-                                placeholder="Nombre y Apellido"
+                                placeholder="First and Last Name"
                                 value={formData.contactName}
                                 onChange={(e) =>
                                     setFormData({
@@ -76,7 +76,7 @@ const ContactUs = () => {
                             <input
                                 className="py-2 px-4 rounded-3xl text-tertiaryGray placeholder-tertiaryGray"
                                 type="text"
-                                placeholder="Example@mail.com"
+                                placeholder="example@email.com"
                                 value={formData.contactEmail}
                                 onChange={(e) =>
                                     setFormData({
@@ -103,7 +103,7 @@ const ContactUs = () => {
                                 id=""
                                 cols="35"
                                 rows="3"
-                                placeholder="Ingresa tu mensaje aquí"
+                                placeholder="Enter your message here"
                                 value={formData.contactMessage}
                                 onChange={(e) =>
                                     setFormData({
@@ -125,24 +125,15 @@ const ContactUs = () => {
                                     !formData.contactName
                                 }
                             >
-                                Enviar
+                                SEND
                             </button>
                         </form>
                     </div>
                     <div className="flex flex-col items-center mb-8 md:items-start md:w-1/2 gap-3">
-                        <h2 className="font-bold text-secondaryBlack">
-                            CONTACTO
-                        </h2>
-                        <h1 className="font-bold text-primaryOrange text-4xl">
-                            Hablemos hoy
-                        </h1>
+                        <h2 className="font-bold text-secondaryBlack">CONTACT</h2>
+                        <h1 className="font-bold text-primaryOrange text-4xl">Let's talk today</h1>
                         <div className="flex flex-col items-center md:items-start gap-5">
-                            <p className="text-center md:text-start text-lg sm:w-11/12">
-                                Si tienes alguna pregunta, idea, o simplemente
-                                deseas ponerte en contacto con nosotros para
-                                explorar oportunidades de colaboración, no dudes
-                                en hacerlo.
-                            </p>
+                            <p className="text-center md:text-start text-lg sm:w-11/12">If you have any questions, ideas, or simply wish to get in touch with us to explore collaboration opportunities, please don't hesitate to do so.</p>
                             <div className="flex flex-col gap-5">
                                 <div className="flex gap-2 items-center">
                                     <Image
