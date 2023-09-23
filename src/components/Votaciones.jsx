@@ -125,7 +125,7 @@ const Votaciones = () => {
                     <p>{"You haven't participated in a voting activity yet."}</p>
                 </div> : <div className="flex flex-col bg-secondaryGray pt-6 test:w-4/5 shadow rounded-4xl pb-20 sm:pb-8 px-2 sm:px-4">
                     <div className="pb-10 flex flex-col items-center">
-                        <form className="bg-primaryOrange rounded-full flex items-center h-8 justify-around px-2 w-1/2 shadow">
+                        <form className="bg-primaryOrange rounded-full flex items-center h-8 justify-around px-2 w-4/5 sm:w-3/5 md:w-1/2 shadow">
                             <input
                                 type="text"
                                 name="busqueda"
