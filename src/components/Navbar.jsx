@@ -93,7 +93,7 @@ const Navbar = () => {
   } else if (path === "/login") {
     return (
       <header>
-        <nav className="flex justify-between px-6 sm:px-12 items-center bg-white shadow-md h-20">
+        <nav className="flex justify-between px-6 sm:px-8 items-center bg-white shadow-md h-20">
           <ul className="flex w-3/4">
             <li>
               <Image
