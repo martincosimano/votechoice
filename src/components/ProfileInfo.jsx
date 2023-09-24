@@ -25,6 +25,7 @@ const ProfileInfo = () => {
     const [successfulSave, setSuccessfulSave] = React.useState(false)
     const [eliminarCuenta, setEliminarCuenta] = React.useState(false)
     const [loaderActive, setLoaderActive] = React.useState(false)
+    const [error, setError] = React.useState('')
     const email = session.user?.email;
     const availableEdit = {
         true: "h-10 p-2 rounded-lg my-2 border border-blue-500 bg-white text-gray-900 focus:outline-none focus:ring focus:border-blue-500",
@@ -37,13 +38,12 @@ const ProfileInfo = () => {
     })
 
     useEffect( () => {
-        const dbDatos =async () =>{
+        const dbDatos = async () =>{
             try {
                 setLoaderActive( true )
                 const dataMe = await APIGetMe( email );
                 const dbName = Object.values( dataMe )[1].name;
                 const dbPassword = Object.values( dataMe )[1].password;
-                console.log(Object.values( dataMe )[1]);
                 setFormData({
                     name: dbName,
                     password: dbPassword
@@ -69,8 +69,16 @@ const ProfileInfo = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoaderActive(true);
-        const update= await APIUpdateMe(email, formData);
-        if (update.message){
+    
+        // Check if name and password fields are not empty
+        if (formData.name.trim() === '' || formData.password.trim() === '') {
+            setLoaderActive(false);
+            setError('Fields cannot be empty')
+            return;
+        }
+    
+        const update = await APIUpdateMe(email, formData);
+        if (update.message) {
             setLoaderActive(false);
             setSuccessfulSave(!successfulSave);
         }
@@ -85,12 +93,12 @@ const ProfileInfo = () => {
                 <form onSubmit={handleSubmit} className="flex flex-col w-full">
                     <h1 className="font-bold text-3xl my-3">Profile</h1>
                     <div className='flex justify-between items-center'>
-                        <h2 className="font-bold text-xl my-2">Edit Profile</h2>
+                        <h2 className="text-gray-800 font-bold text-xl my-2">Edit Profile</h2>
                           <div className="right-24 top-24 xl:right-36 cursor-pointer">
                               <Handler state={edit} setState={setEdit} />
                           </div>
                     </div>
-                      <label htmlFor="name" className="font-semibold text-sm">FULL NAME</label>
+                      <label htmlFor="name" className="text-sm">FULL NAME</label>
                       <input 
                         type="text" 
                         className={availableEdit[`${edit}`]} 
@@ -100,7 +108,7 @@ const ProfileInfo = () => {
                         onChange={handleChange} 
                     />
                     <hr className="flex-grow border-secondaryBlack mb-2" />
-                    <label htmlFor="email" className="font-semibold text-sm">EMAIL</label>
+                    <label htmlFor="email" className="text-sm">EMAIL</label>
                     <input 
                         type="text" 
                         className={availableEdit['false']} 
@@ -110,7 +118,7 @@ const ProfileInfo = () => {
                         onChange={handleChange} 
                     />
                     <hr className="flex-grow border-secondaryBlack mb-2" />
-                    <label htmlFor="password" className="font-semibold text-sm">PASSWORD</label>
+                    <label htmlFor="password" className="text-sm">PASSWORD</label>
                     <input 
                         type="password" 
                         className={availableEdit[`${edit}`]}
@@ -120,9 +128,10 @@ const ProfileInfo = () => {
                         onChange={handleChange} 
                     />
                     <hr className="flex-grow border-secondaryBlack mb-2" />
+                    <span className="text-red-500 text-center md:text-left text-sm mt-3">{error}</span>
                     <button 
                         type="button"
-                        className="text-red-500 text-center md:text-left text-sm font-semibold mt-3"
+                        className="text-red-500 text-center text-sm md:text-left font-semibold mt-3"
                         onClick = {() => setEliminarCuenta(!eliminarCuenta)}
                     > 
                         DELETE ACCOUNT 
@@ -130,7 +139,7 @@ const ProfileInfo = () => {
                     <div className='flex justify-center mt-6'>
                         <button
                             type="submit"
-                            className="text-secondaryWhite rounded-4xl bg-green-500 py-3 px-10"
+                            className="text-secondaryWhite text-lg font-semibold rounded-4xl bg-green-500 py-3 px-10"
                         >
                             SAVE CHANGES
                         </button>
