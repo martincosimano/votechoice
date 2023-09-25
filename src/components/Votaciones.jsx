@@ -63,10 +63,12 @@ const Votaciones = () => {
 
     const toggleActive = () => {
         setShowActive(!showActive);
+        setShowInactive(true);
     };
-
+    
     const toggleInactive = () => {
         setShowInactive(!showInactive);
+        setShowActive(true);
     };
 
     const filteredRooms = rooms.filter((room) => {
