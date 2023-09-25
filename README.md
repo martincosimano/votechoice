@@ -1,11 +1,11 @@
 <div align="center">
-  <img width="900" height="400" style="margin-bottom: 1.5rem" src="public/Images/imgLogin.png" />
+  
 </div>
 
 
 <div align="center">
   <h1>VoteChoice: Toma Decisiones en Grupo de Forma Sencilla💻</h1>
-  <img width="150" style="margin-bottom: 1.5rem" src="public/Images/logoPanel.png" />
+  ![image](https://github.com/martincosimano/votechoice/assets/103332504/53700c27-ae55-4262-a1bd-71e2c408888e)
 </div>
 
 
