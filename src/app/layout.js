@@ -9,6 +9,11 @@ import { NextAuthOptions } from "./api/auth/[...nextauth]/options"
 
 export const dynamic = 'force-dynamic'
 
+export const metadata = {
+  title: "VoteChoice",
+  description: "Decisions made collectively"
+}
+
 export default async function RootLayout({ children }) {
   const session = await getServerSession(NextAuthOptions)
 
