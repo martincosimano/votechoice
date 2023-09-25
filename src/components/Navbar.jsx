@@ -48,7 +48,6 @@ const Navbar = () => {
     }
   }, []);
 
-
   if (path === "/" || path === "/about" || path === "/contact") {
     return (
       <header>
@@ -129,8 +128,8 @@ const Navbar = () => {
       <header>
         <nav className="flex justify-end h-20 w-screen">
           <ul className="flex justify-end px-24 items-center relative">
-            <li className="right-20 cursor-pointer w-12 h-12 rounded-full border flex justify-center items-center shadow-md">
-              <p className="text-primaryPurple font-semibold font-dmsans">{session.user.name.substring(0,2).toUpperCase()}</p>
+            <li className="right-20 cursor-pointer w-12 h-12 rounded-full flex justify-center items-center shadow-md">
+              <Image className="rounded-full" src="/Images/avatar.png" width={90} height={90} alt="avatar" />
             </li>
             <div className="statusCircle w-2 h-2 rounded-full hidden md:block bg-green-400 absolute top-5 right-24"></div>
           </ul>
@@ -152,8 +151,9 @@ const Navbar = () => {
                 height={70}
               />
             </li>
-            <li className="right-20 cursor-pointer w-12 h-12 rounded-full border flex justify-center items-center shadow-md" onClick={toggleMobileMenu}>
-              <p className="text-white font-semibold font-dmsans">{session.user.name.substring(0,2).toUpperCase()}</p>
+            <li className="right-20 cursor-pointer w-12 h-12 rounded-full flex justify-center items-center shadow-md" onClick={toggleMobileMenu}>
+              <Image className="rounded-full max-w-none" src="/Images/avatar.png" width={50} height={50} alt="avatar" />
+              <div className="statusCircle w-2 h-2 rounded-full bg-green-400 absolute top-5 right-6"></div>
             </li>
           </ul>
         </nav>

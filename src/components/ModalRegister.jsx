@@ -49,11 +49,14 @@ const ModalRegister = (callback) => {
                 callback.callback();
             } else {
                 setLoaderActive(false);
-                setError("Ya existe una cuenta con este email.");
+                setError("There is already an account with this email.");
             }
-        } else {
+        }else if(passwordModal.value.length < 8) {
             setLoaderActive(false);
-            setError("las contraseñas no son iguales");
+            setError("Password must be at least 8 characters long.");
+        }else {
+            setLoaderActive(false);
+            setError("The passwords do not match");
         }
     };
 

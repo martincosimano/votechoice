@@ -74,11 +74,12 @@ const ProfileInfo = () => {
         if (formData.name.trim() === '' || formData.password.trim() === '') {
             setLoaderActive(false);
             setError('Fields cannot be empty')
-            return;
+        }else if (formData.password.length < 8) {
+            setLoaderActive(false);
+            setError('Password must be at least 8 characters long.')
         }
-    
-        const update = await APIUpdateMe(email, formData);
-        if (update.message) {
+        else{
+            const update = await APIUpdateMe(email, formData);
             setLoaderActive(false);
             setSuccessfulSave(!successfulSave);
         }
