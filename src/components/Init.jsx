@@ -13,7 +13,7 @@ const Init = () => {
     return (
         <main className="flex justify-between items-center mx-2 md:mx-0 font-dmsans flex-col md:flex-row md:py-8 mb-4 sm:mb-0 md:h-100">
             <section className="my-10 h-auto w-full text-center md:w-1/2 md:text-left md:pl-16">
-                <h1 className="text-4xl font-bold leading-tight">Simplified voting, <span className="block">decisions made collectively</span></h1>
+                <h1 className="text-4xl font-bold leading-tight">Decisions made collectively</h1>
                 <div className="my-8 sm:mt-8 sm:mb-10 pr-2 md:pr-4 xl:pr-10">
                     <p className="text-lg md:w-10/12">Our platform focuses on simplifying the voting process and bringing people together in decision-making.</p>
                 </div>
