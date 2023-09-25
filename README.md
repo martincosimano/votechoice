@@ -14,10 +14,10 @@
 
 ## 📕 Description of the app
 
-<b>VoteChoice</b> is the perfect solution for making group decisions efficiently and hassle-free. With our app, you can create customized surveys, participate in shared surveys, and simplify your voting processes. Join us and make decision-making in your group easier!
+<b>VoteChoice</b> is the perfect solution for making group decisions efficiently and hassle-free. With this app, you can create customized surveys, participate in shared surveys, and simplify your voting processes. Join us and make decision-making in your group easier!
 
 
-VoteChoice is your perfect solution. With our app, you can:
+VoteChoice is your perfect solution. With this app, you can:
 
 ✅ Create Customized Surveys: Design tailor-made surveys and share them with the people whose opinions matter most to you. Set deadlines to ensure you get responses on time and have complete control over your surveys.
 
