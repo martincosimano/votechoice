@@ -66,7 +66,7 @@ const Resultados = () => {
                     <h2 className="text-4xl font-bold text-secondaryBlack pt-2">
                         Results
                     </h2>
-                    <p className="text-sm md:text-md py-3">
+                    <p className="text-sm md:text-md py-3 md:w-3/4">
                         Most recent vote room:{" "}
                         <span className="font-bold">{result.problem}</span>
                     </p>
